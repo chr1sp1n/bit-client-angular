@@ -1,0 +1,45 @@
+
+
+.btn-map{
+  border: none;
+  border-radius: 50%;
+  background-color: rgba($dark, .7);
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: theme-color('white');
+  transition: background-color .3s ease-in-out;
+  &:focus,
+  &:hover{
+    border: none;
+    outline: 0;
+    background-color: rgba($dark, .9);
+  }
+}
+
+
+.bit-beer{
+  background-color: rgba($drink, .7);
+  &:focus,
+  &:hover{
+    outline: 0;
+    border: none;
+    background-color: rgba($drink, .9);
+  }
+}
+
+.bit-food{
+  background-color: rgba($food, .7);
+  &:focus,
+  &:hover{
+    background-color: rgba($food, .9);
+  }
+}
+
+.bit-euro{
+  background-color: rgba($euro, .7);
+  &:focus,
+  &:hover{
+    background-color: rgba($euro, .9);
+  }
+}
