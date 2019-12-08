@@ -3,4 +3,25 @@
   top: 1.5rem;
   right: 1.5rem;
   z-index: 100;
+
+  #menu-container{
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    transform: scale(0);
+
+    transition: transform .5s ease-in-out, top .5s ease-in-out, right .5s ease-in-out;
+    background-color: white;
+  }
+
+  &.opened{
+    #menu-container{
+      top: 50%;
+      right: 50%;
+      width: 80vw;
+      height: 80vh;
+      transform: scale(1) translate(50%, -50%);
+
+    }
+  }
 }
