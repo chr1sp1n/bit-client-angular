@@ -12,4 +12,20 @@ export class FilterComponent implements OnInit {
   ngOnInit() {
   }
 
+  cat($event) {
+    let $el = $($event.target);
+    let $ul = $el.next('ul');
+    if($ul.hasClass('active')){
+      $ul.removeClass('active');
+    }else{
+
+      let $ulCat = $('#filter>ul'); 
+      let catRel = Math.abs($el.offset().left - $ulCat.offset().left);
+      let l = (( $('#filter>ul').outerWidth() /2 ) + catRel) * -1;
+      $('#filter>ul').find('ul').removeClass('active');
+      $ul.css({'left': l});
+      $ul.addClass('active');
+    }
+
+  }
 }
